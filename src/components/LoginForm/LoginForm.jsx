@@ -1,4 +1,5 @@
-import { Field, Form, Formik } from "formik";
+import { Field, Formik } from "formik";
+import { FormWrapper } from "./LoginForm.styled";
 
 export default function LoginForm() {
   const handleSubmit = (values, actions) => {
@@ -7,18 +8,15 @@ export default function LoginForm() {
   };
   return (
     <Formik initialValues={{ email: "", password: "" }} onSubmit={handleSubmit}>
-      <Form>
-        <label>
-          Email
-          <Field type="email" name="email" />
-        </label>
+      <FormWrapper>
+        <label>Email </label>
+        <Field type="email" name="email" />
 
-        <label>
-          Password
-          <Field type="password" name="password" />
-        </label>
+        <label>Password</label>
+        <Field type="password" name="password" />
+
         <button type="submit">Log in</button>
-      </Form>
+      </FormWrapper>
     </Formik>
   );
 }

@@ -1,4 +1,5 @@
-import { Field, Form, Formik } from "formik";
+import { Field, Formik } from "formik";
+import { FormWrapper } from "./RegistrationForm.styled";
 
 export default function RegistrationForm() {
   const handleSubmit = (values, actions) => {
@@ -6,19 +7,22 @@ export default function RegistrationForm() {
     actions.resetForm();
   };
   return (
-    <Formik initialValues={{ email: "", password: "" }} onSubmit={handleSubmit}>
-      <Form>
-        <label>
-          Email
-          <Field type="email" name="email" />
-        </label>
+    <Formik
+      initialValues={{ username: "", email: "", password: "" }}
+      onSubmit={handleSubmit}
+    >
+      <FormWrapper>
+        <label>Username</label>
+        <Field type="email" name="username" />
 
-        <label>
-          Password
-          <Field type="password" name="password" />
-        </label>
+        <label>Email</label>
+        <Field type="email" name="email" />
+
+        <label>Password</label>
+        <Field type="password" name="password" />
+
         <button type="submit">Registration</button>
-      </Form>
+      </FormWrapper>
     </Formik>
   );
 }
