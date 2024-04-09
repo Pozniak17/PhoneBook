@@ -5,7 +5,7 @@ import Login from "./pages/Login";
 import Contacts from "./pages/Contacts";
 import Layout from "./components/Layout/Layout";
 
-function App() {
+export default function App() {
   return (
     <Layout>
       <Routes>
@@ -17,5 +17,3 @@ function App() {
     </Layout>
   );
 }
-
-export default App;

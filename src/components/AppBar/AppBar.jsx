@@ -4,7 +4,7 @@ import UserMenu from "../UserMenu/UserMenu";
 import { Container, Header } from "./AppBar.styled";
 
 export default function AppBar() {
-  const isLoggedIn = true;
+  const isLoggedIn = false;
   return (
     <Container>
       <Header>
