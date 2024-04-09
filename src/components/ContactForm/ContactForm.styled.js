@@ -1,6 +1,8 @@
 import { styled } from "styled-components";
 
 export const FormContainer = styled.form`
+  margin: 0 auto;
+  width: 400px;
   border-radius: 8px;
   border: 2px solid #9200ab;
   background-color: ${(props) => props.theme.colors.white};

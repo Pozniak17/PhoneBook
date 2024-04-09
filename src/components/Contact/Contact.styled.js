@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const ContactItem = styled.li`
+  width: 400px;
+  margin: 0 auto;
   background-color: ${(props) => props.theme.colors.white};
   border: 2px solid #9200ab;
   margin-bottom: ${(props) => props.theme.spacing(2)}; //10px

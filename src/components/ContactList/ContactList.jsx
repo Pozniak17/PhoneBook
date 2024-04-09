@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 
 import { selectFilteredContacts } from "../../redux/contacts/slice";
 import Contact from "../Contact/Contact";
+import { Notification, Wrapper } from "./ContactList.styled";
 
 export default function ContactList() {
   const contacts = useSelector(selectFilteredContacts);
@@ -15,7 +16,7 @@ export default function ContactList() {
           ))}
         </ul>
       ) : (
-        <b>No contacts found</b>
+        <Notification>No contacts found</Notification>
       )}
     </>
   );
