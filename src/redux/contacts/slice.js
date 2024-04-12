@@ -3,6 +3,7 @@ import { addContact, deleteContact, fetchContacts } from "./operations";
 
 import { selectContacts } from "./selectors";
 import { selectNameFilter } from "../filters/selectors";
+import { logOut } from "../auth/operations";
 
 const initialContacts = {
   items: [],
@@ -48,7 +49,12 @@ export const contactsSlice = createSlice({
         );
         state.items.splice(index, 1);
       })
-      .addCase(deleteContact.rejected, handleRejected);
+      .addCase(deleteContact.rejected, handleRejected)
+      .addCase(logOut.fulfilled, (state) => {
+        state.items = [];
+        state.error = null;
+        state.isLoading = false;
+      });
   },
 });
 

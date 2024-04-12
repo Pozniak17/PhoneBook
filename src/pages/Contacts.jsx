@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectIsLoading } from "../redux/contacts/selectors";
 import { useEffect } from "react";
 import { fetchContacts } from "../redux/contacts/operations";
+import { Text } from "../components/ContactList/ContactList.styled";
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -17,8 +18,9 @@ export default function Contacts() {
     <>
       <PageTitle>Your contacts</PageTitle>
       <ContactForm />
-      <div>{isLoading && "Request in progress..."}</div>
-      <ContactList />
+      <div>
+        {isLoading ? <Text>Request in progress...</Text> : <ContactList />}
+      </div>
     </>
   );
 }

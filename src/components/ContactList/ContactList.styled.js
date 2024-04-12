@@ -9,3 +9,7 @@ export const Notification = styled.p`
 export const Wrapper = styled.div`
   width: 400px;
 `;
+
+export const Text = styled.p`
+  text-align: center;
+`;
