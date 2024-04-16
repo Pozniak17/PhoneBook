@@ -12,7 +12,7 @@ export default function Navigation() {
         <span role="img" aria-label="computer icon">
           ☑️
         </span>
-        Contacts Store
+        My Contacts
       </Logo>
 
       <nav>

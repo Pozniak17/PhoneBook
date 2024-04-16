@@ -5,6 +5,8 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
+  background-image: url(./components/utils/img/wells.jpg);
+  background-size: cover;
 }
 
 h1,

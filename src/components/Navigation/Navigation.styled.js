@@ -14,7 +14,8 @@ export const List = styled.ul`
 `;
 
 export const Logo = styled.p`
-  font-weight: ${(props) => props.theme.fontWeights.larger}; //500
+  color: white;
+  font-weight: ${(props) => props.theme.fontWeights.extra}; //800
   margin: 0;
 `;
 

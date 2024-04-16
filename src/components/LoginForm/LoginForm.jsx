@@ -12,7 +12,7 @@ export default function LoginForm() {
   return (
     <Formik initialValues={{ email: "", password: "" }} onSubmit={handleSubmit}>
       <FormWrapper>
-        <label>Email </label>
+        <label>Email</label>
         <Field type="email" name="email" />
 
         <label>Password</label>

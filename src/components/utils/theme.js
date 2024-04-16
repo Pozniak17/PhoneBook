@@ -8,6 +8,7 @@ export const theme = {
     blue: "2196f3",
     primaryText: "#212121",
     secondaryText: "#757575",
+    accent: "#0a8fa2",
   },
   space: [0, 2, 4, 8, 16, 32, 64, 100, 128, 256],
   sizes: [100, 200, 300, 400],
@@ -28,6 +29,7 @@ export const theme = {
     larger: 500,
     big: 600,
     bold: 700,
+    extra: 800,
   },
   lineHeights: {
     body: 1.5,
