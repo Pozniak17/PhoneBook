@@ -1,9 +1,13 @@
-import { Field, Formik } from "formik";
-import { FormWrapper } from "./LoginForm.styled";
+import { Formik } from "formik";
+import { Button, FormWrapper, Input } from "./LoginForm.styled";
 import { useDispatch } from "react-redux";
 import { logIn } from "../../redux/auth/operations";
+import { useId } from "react";
 
 export default function LoginForm() {
+  const emailId = useId();
+  const passwordId = useId();
+
   const dispatch = useDispatch();
   const handleSubmit = (values, actions) => {
     dispatch(logIn(values));
@@ -12,13 +16,13 @@ export default function LoginForm() {
   return (
     <Formik initialValues={{ email: "", password: "" }} onSubmit={handleSubmit}>
       <FormWrapper>
-        <label>Email</label>
-        <Field type="email" name="email" />
+        <label htmlFor={emailId}>Email</label>
+        <Input type="email" name="email" id={emailId} />
 
-        <label>Password</label>
-        <Field type="password" name="password" />
+        <label htmlFor={passwordId}>Password</label>
+        <Input type="password" name="password" id={passwordId} />
 
-        <button type="submit">Log in</button>
+        <Button type="submit">Log in</Button>
       </FormWrapper>
     </Formik>
   );
