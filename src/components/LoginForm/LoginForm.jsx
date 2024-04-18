@@ -1,5 +1,5 @@
 import { Formik } from "formik";
-import { Button, FormWrapper, Input } from "./LoginForm.styled";
+import { Button, FormWrapper, Input, Text, Link } from "./LoginForm.styled";
 import { useDispatch } from "react-redux";
 import { logIn } from "../../redux/auth/operations";
 import { useId } from "react";
@@ -23,6 +23,9 @@ export default function LoginForm() {
         <Input type="password" name="password" id={passwordId} />
 
         <Button type="submit">Log in</Button>
+        <Text>
+          or <Link to="/register">register</Link>
+        </Text>
       </FormWrapper>
     </Formik>
   );

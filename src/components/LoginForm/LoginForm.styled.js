@@ -2,11 +2,12 @@ import { Field, Form } from "formik";
 import styled from "styled-components";
 
 import image from "../utils/img/12728.jpg";
+import { NavLink } from "react-router-dom";
 
 export const FormWrapper = styled(Form)`
   background-image: url(${image});
   background-size: unset;
-  padding: 25px;
+  padding: 35px;
   background-color: #11173b30;
   border-radius: 8px;
   width: 300px;
@@ -19,6 +20,9 @@ export const FormWrapper = styled(Form)`
 
   > label {
     color: white;
+    &:first-child {
+      padding-top: 30px;
+    }
   }
 `;
 
@@ -43,4 +47,14 @@ export const Button = styled.button`
   &:hover {
     background-color: #4719bc;
   }
+`;
+
+export const Text = styled.p`
+  font-size: 18px;
+  color: white;
+  margin-top: 12px;
+`;
+
+export const Link = styled(NavLink)`
+  color: white;
 `;
