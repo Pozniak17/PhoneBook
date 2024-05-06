@@ -22,16 +22,24 @@ export const FormInput = styled.input`
   margin-bottom: ${(props) => props.theme.spacing(3)}; //15px
   width: 200px;
   border: ${(props) => props.theme.borders.normal} gray;
+  height: 24px;
+  font-size: 20px;
+  margin-bottom: 16px;
 `;
 
 export const Button = styled.button`
-  padding: 5px;
-  background-color: ${(props) => props.theme.colors.white};
-  border-radius: ${(props) => props.theme.radii.middle};
-  border: ${(props) => props.theme.borders.normal} grey;
+  color: white;
+  background-color: #9c27b0;
   cursor: pointer;
+
+  padding: 8px 16px;
+  border-radius: ${(props) => props.theme.radii.normal};
+  text-decoration: none;
+
+  font-weight: ${(props) => props.theme.fontWeights.bold}; //700
+  border: none;
+
   &:hover {
-    background-color: navy;
-    color: ${(props) => props.theme.colors.white};
+    background-color: #4719bc;
   }
 `;
