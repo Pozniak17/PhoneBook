@@ -1,9 +1,14 @@
 import { useDispatch } from "react-redux";
-import { Field, Formik } from "formik";
-import { FormWrapper } from "./RegistrationForm.styled";
+import { Formik } from "formik";
+import { Button, FormWrapper, Input } from "./RegistrationForm.styled";
 import { register } from "../../redux/auth/operations";
+import { useId } from "react";
 
 export default function RegistrationForm() {
+  const usernameId = useId();
+  const emailId = useId();
+  const passwordId = useId();
+
   const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
@@ -16,16 +21,16 @@ export default function RegistrationForm() {
       onSubmit={handleSubmit}
     >
       <FormWrapper>
-        <label>Username</label>
-        <Field type="text" name="name" />
+        <label htmlFor={usernameId}>Username</label>
+        <Input type="text" name="name" id={usernameId} />
 
-        <label>Email</label>
-        <Field type="email" name="email" />
+        <label htmlFor={emailId}>Email</label>
+        <Input type="email" name="email" id={emailId} />
 
-        <label>Password</label>
-        <Field type="password" name="password" />
+        <label htmlFor={passwordId}>Password</label>
+        <Input type="password" name="password" id={passwordId} />
 
-        <button type="submit">Registration</button>
+        <Button type="submit">Registration</Button>
       </FormWrapper>
     </Formik>
   );
