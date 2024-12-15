@@ -23,7 +23,6 @@ export const Link = styled(NavLink)`
   padding: 8px 16px;
   border-radius: ${(props) => props.theme.radii.normal};
   text-decoration: none;
-  color: ${(props) => props.theme.colors.black};
   font-weight: ${(props) => props.theme.fontWeights.bold}; //700
 
   &.active {
